@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patroclo - Gato en adopción</title>
+    <link rel="stylesheet" href="../../css/estilo-animal-es.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+        function datos_id() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var idGato = urlParams.get('id');
+            console.log(idGato);
+            $.get('https://huachitos.cl/api/animales/', function (response) {
+                $.each(response.data, function (data) {
+                    if (data.id === idGato) {
+                        var card =
+                            '<h2>' + data.nombre + ' - Gato en adopción</h2>' +
+                            'img src="' + data.imagen + '" alt=" Imagen del gato ' + data.nombre + '">' +
+                            '<ul>' + '<li>Nombre: ' + data.nombre + '</li>' +
+                            '<li>Edad: ' + data.edad + '</li>' +
+                            '<li>Género: ' + data.genero + '</li>' +
+                            '<li>Esterilizado: ' + data.esterilizado + '</li>' +
+                            '<li>Nro. Vacunas: ' + data.vacunas + '</li>' + '</ul>';
+
+
+                        $('#gato_info').append(card);
+                    }
+                });
+            });
+        }
+        $(document).ready(function () {
+            datos_id();
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>ONG-Ayuda a tu Peludo</h1>
+    </header>
+    <main>
+        <section class="ficha-animal" id="gato_info">
+            <h2> - Gato en adopción</h2>
+            <a href="" class="volver">Inicio > Volver a Gatos</a>
+            <img src="" alt="">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section> <!-- .ficha-animal -->
+    </main>
+    <footer>
+        <p>&copy; Ayuda a un Peludo - Todos los derechos reservados</p>
+    </footer>
+</body>
+
+</html>

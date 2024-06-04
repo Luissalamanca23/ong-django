@@ -21,8 +21,9 @@ from animales_gato.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', index),
-    path('index/animales_gato/', animales_gato),
-    path('index/animales_gato/gatos/', animales_gato),
-    
+    path('', index),
+    path('animales_gato/', animales_gato),
+    path('animales_gato/gatos/', gatos),
+    path('animales_perro/', animales_perro),
+    path('animales_perro/perros/', perros),
 ]
