@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ONG-Adopta a un Animal</title>
     <link rel="icon" href="{% static 'fotos/logo.jpeg' %}">
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-    <script src="js/ejemplo.js"></script>
+    <script src="{% static 'js/ejemplo.js' %}"></script>
 </head>
 
 <body>
@@ -23,8 +23,8 @@
         <nav>
             <a href="">Inicio</a>
             <a href=animales_gato rel="noopener noreferrer">Gatos</a>
-            <a href="html/perros/perros.html" rel="noopener noreferrer">Perros</a>
-            <a href="html/login.html"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user icon-user-nav"
+            <a href=animales_perro rel="noopener noreferrer">Perros</a>
+            <a href=login ><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user icon-user-nav"
                 width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none"
                 stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -48,12 +48,12 @@
         <h2>Nuestra Seccion De Ayuda</h2>
         <article class="Animales">
             <div class="seleccion-animales">
-                <img src="fotos/images3.jpeg" alt="Fotos de un gato" width="200px">
-                <a class="boton-re-direccion" href="html/gatos/gatos.html">Ir a la seccion de gatos</a>
+                <img src="{% static 'fotos/images3.jpeg' %}" alt="Fotos de un gato" width="200px">
+                <a class="boton-re-direccion" href=animales_gato >Ir a la seccion de gatos</a>
             </div>
             <div class="seleccion-animales">
-                <img src="fotos/WhatsApp Image 2024-03-19 at 10.17.09.jpeg" alt="Fotos de un perros" width="200px">
-                <a class="boton-re-direccion" href="html/perros/perros.html">Ir a la seccion de Perros</a>
+                <img src="{% static 'fotos/WhatsApp Image 2024-03-19 at 10.17.09.jpeg' %}" alt="Fotos de un perros" width="200px">
+                <a class="boton-re-direccion" href=animales_perro>Ir a la seccion de Perros</a>
             </div>
         </article>
     </section>
