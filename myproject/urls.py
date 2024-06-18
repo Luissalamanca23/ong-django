@@ -14,16 +14,18 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path, include
+from django.urls import path,include
+from django.contrib import admin as django_admin
 from index.views import *
+from administrador.views import *
+
 
 urlpatterns = [
-    path('admin/', admin.site.urls),  # Esta línea conecta todas las rutas de administración de Django.
-    path('', index),  # Esta línea conecta la ruta raíz ('') a la vista 'index'.
-    path('animales_gato/', animales_gato),  # Esta línea conecta la ruta 'animales_gato/' a la vista 'animales_gato'.
-    path('animales_perro/', animales_perro),  # Esta línea conecta la ruta 'animales_perro/' a la vista 'animales_perro'.
-    path('animales_gato/gato/<slug:slug>/', gato, name='gato'),  # Esta línea conecta la ruta 'animales_gato/gato/<slug:slug>/' a la vista 'gato'. El '<slug:slug>' es un parámetro que se pasará a la vista 'gato'.
-    path('animales_perro/perros/', perros),  # Esta línea conecta la ruta 'animales_perro/perros/' a la vista 'perros'.
-    path('login/', login),  # Esta línea conecta la ruta 'login/' a la vista 'login'.
+    path('admin/', django_admin.site.urls),
+    path('animales_gato/', animales_gato),
+    path('animales_perro/', animales_perro),
+    path('animales_gato/gato/', gato),
+    path('animales_perro/perros/', perro),
+    path('',include('index.urls')),
+    path('administracion/',include('administrador.urls')),
 ]

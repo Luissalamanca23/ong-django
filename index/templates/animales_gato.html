@@ -13,31 +13,6 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-
-    <script>
-        function traer_datos(){
-            $.get('https://huachitos.cl/api/animales/', function(response){
-                $.each(response.data, function(i, data){
-                    if(data.tipo.toLowerCase() === "gato") {
-                        var gatoUrl = '/gatos/' + data.slug + '/';
-                        var card = '<div class="card" style="width: 18rem;">' +
-                            '<img class="card-img-top" src="' + data.imagen + '" alt="Card image cap">' +
-                            '<div class="card-body">' +
-                            '<h5 class="card-title nombre_animal">' + data.nombre + '</h5>' +
-                            '<p class="card-text">' + data.desc_fisica + '</p>' +
-                            '<a href="' + gatoUrl + '" class="btn btn-primary">Ver más</a>' +
-                            '</div></div>';
-    
-                        $('.opciones').append(card);
-                    }
-                });
-            });
-        }
-    
-        $(document).ready(function() {
-            traer_datos();
-        });
-    </script>
 </head>
 
 <body>
@@ -63,15 +38,17 @@
     <section class="opciones cards-container">
         <div class="info_animlaes">
         <h2>Nuestros Gatos que buscan una Familia</h2>
-        <div class="card" style="width: 18rem;" id="gatos_insert">
-            <img class="card-img-top" src="" alt="Card image cap">
+        <br>
+        {% for mascotas in mascota %}
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="" alt="imagen gato {{gato.nombre}}">
             <div class="card-body">
-              <h5 class="card-title .nombre_animal"></h5>
-              <p class="card-text"></p>
-              <a href="" class="btn btn-primary">Ver más</a>
-            </div>
-          </div>
-        </div>
+            <h5 class="card-title nombre_animal"> {{mascota.nombre_mascota}} </h5>
+            <p class="card-text">{{gato.raza}}</p>
+            <a href=gato/ class="btn btn-primary">Ver más</a>
+            </div></div>
+    {% endfor %}
+    <br>
     </section> <!-- .opciones -->
     <footer>
         <p>&copy; Ayuda a un Peludo - Todos los derechos reservados</p>

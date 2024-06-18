@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+.ficha-animal {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.ficha-animal img {
+    float: left;
+    margin-right: 20px;
+}
+
+.ficha-animal ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.ficha-animal li {
+    margin-bottom: 5px;
+}
+
+a.volver {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.Lista-participantes li{
+    list-style: none;
+}
+
+a{
+    padding: 3px;
+    color:black;
+    text-decoration: none;
+}

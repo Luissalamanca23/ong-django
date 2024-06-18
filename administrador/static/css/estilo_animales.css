@@ -1,0 +1,77 @@
+body {
+    /* background-color: rgb(54, 49, 49);
+    /* color: white;  para codear en la noche */
+    text-align: center;
+    margin: 0;
+}
+
+.navegacion-alta,
+.barra-navegacion,
+a {
+    text-align: right;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+
+.barra-navegacion{
+    padding-top: 10px;
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.opciones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+a, .boton-re-direccion{
+    margin: auto;
+    transition-duration: 0.7s;
+    border: solid 1px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+a:hover {
+    background-color: #636363;
+    color: rgb(255, 255, 255);
+}
+
+.contenedor {
+    display: flex;
+    align-items: center; /* Esto alinea verticalmente los elementos en el centro */
+    padding-bottom: 30px;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.Lista-participantes li{
+    list-style: none;
+}
+
+a{
+    padding: 3px;
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.info_animlaes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}

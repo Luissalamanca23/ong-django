@@ -1,0 +1,111 @@
+h1,
+h2 {
+    text-align: center;
+}
+
+
+.opciones {
+    background-color: rgb(54, 60, 58);
+}
+
+body{
+    margin: 0;
+}
+
+div {
+    padding-left: 600px;
+    padding-right: 600px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+img {
+    padding: 10px;
+}
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.barra-navegacion{
+    padding-top: 10px;
+    text-align: right;
+    text-decoration: none;
+}
+.barra-navegacion a{
+    text-decoration: none;
+    padding: 7px;
+    transition-duration: 0.7s;
+    border: solid 1px;
+    border-radius: 10px;
+    border-color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.icon-user-nav{
+    width: 30px;
+}
+
+.barra-navegacion,
+.direcciones {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.integrantes,
+li {
+    text-align: center;
+}
+
+.Animales {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.bienvedida {
+    text-align: center;
+}
+
+.seleccion-animales {
+    display: flex;
+    align-items: center;
+}
+.boton-re-direccion{
+    text-decoration: none;
+    margin: auto;
+    transition-duration: 0.7s;
+    border: solid 1px;
+    border-radius: 10px;
+    border-color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+a:hover{
+    background-color: #636363;
+    color: rgb(0, 0, 0);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.Lista-participantes li{
+    list-style: none;
+}
+
+a{
+    padding: 3px;
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+}
